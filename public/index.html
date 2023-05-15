@@ -4,60 +4,63 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- main css -->
     <link rel="stylesheet" href="./style.css" />
     <title>Tailwind</title>
   </head>
   <body>
+    <!-- === Header === -->
     <header>
+      <!-- container -->
       <div class="container mx-auto px-4">
         <nav class="flex justify-between items-center py-5">
           <!-- logo -->
           <div class="w-32 md:w-full z-20">
-            <img src="./img/logo.png" alt="logo" />
+            <img src="./img/logo.png " alt="website logo" />
           </div>
           <!-- links -->
-          <ul id="menu" class="c-menu invisible md:visible">
+          <ul id="menu" class="invisible md:visible c-menu">
             <li class="m-12 md:m-0">
-              <a class="c-link" href="#">Home</a>
+              <a href="#" class="c-link">Home</a>
             </li>
             <li class="m-12 md:m-0">
-              <a class="c-link" href="#">Products</a>
+              <a href="#" class="c-link">Product</a>
             </li>
             <li class="m-12 md:m-0">
-              <a class="c-link" href="#">FAQ</a>
+              <a href="#" class="c-link">FAQ</a>
             </li>
             <li class="m-12 md:m-0">
-              <a class="c-link" href="#">Contact</a>
+              <a href="#" class="c-link">Contact</a>
             </li>
           </ul>
-          <!-- menu btn -->
-          <div id="menu-btn" class="z-20 md:hidden cursor-pointer">
+          <!-- menu button -->
+          <div id="menu-button" class="z-20 md:hidden cursor-pointer">
             <svg
               xmlns="http://www.w3.org/2000/svg"
+              class="h-8 w-8"
               fill="none"
               viewBox="0 0 24 24"
-              stroke-width="1.5"
               stroke="currentColor"
-              class="w-6 h-6"
             >
               <path
                 stroke-linecap="round"
                 stroke-linejoin="round"
-                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
               />
             </svg>
           </div>
         </nav>
       </div>
     </header>
-    <!-- Banner -->
+    <!-- === Banner === -->
     <section>
       <div
         class="w-full bg-no-repeat bg-cover relative h-custom"
-        style="background-image: url(./img/banner.png)"
+        style="background-image: url('./img/banner.png')"
       >
         <div
-          class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-center"
+          class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 text-white text-center"
         >
           <!-- tag -->
           <p class="text-xl mb-5">Food app</p>
@@ -67,61 +70,66 @@
           >
             Why stay hungry when you can order form Bella Onojie
           </h1>
+          <!-- desc -->
           <p class="text-xl mb-5 font-light">
             Download the bella onoje’s food app now on
           </p>
-          <!-- button -->
+          <!-- buttons -->
           <div class="flex justify-center">
             <button
-              class="transition-all mx-4 border border-transparent bg-red-500 px-10 py-3 rounded-full hover:bg-transparent hover:border-white"
+              class="mx-4 border border-transparent bg-red-500 px-10 py-3 rounded-full hover:bg-transparent hover:border-white transition-all"
             >
               Playstore
             </button>
             <button
-              class="transition-all mx-4 border border-white bg-white px-10 py-3 rounded-full hover:border-transparent hover:bg-red-500"
+              class="mx-4 border border-white bg-transparent px-10 py-3 rounded-full hover:bg-red-500 hover:border-transparent transition-all"
             >
-              App store
+              Appstore
             </button>
           </div>
         </div>
       </div>
     </section>
-    <!-- appImage -->
+    <!-- === App Image === -->
     <section class="relative">
       <div
         class="absolute top-1/2 left-1/2 transform -translate-x-2/3 -translate-y-1/4"
       >
         <img
           src="./img/app-img.png"
-          alt="AppImage"
+          alt="phone app screens"
           class="max-w-none w-screen pl-20 md:w-auto"
         />
       </div>
     </section>
-    <!-- AppSteps -->
+    <!-- === App Steps === -->
     <section class="pt-96 mt-28 sm:pt-40-c md:mt-0">
-      <div class="container mx-auto px-40">
+      <!-- container -->
+      <div class="container mx-auto px-4">
         <hr class="w-4/5 mx-auto h-0.5 bg-gray-200 md:w-2/5" />
-        <!-- Title -->
+        <!-- tiltle -->
         <h2 class="text-center text-4xl font-semibold py-10">
           How the app works
         </h2>
-        <!-- Step 1 -->
+        <!-- step 1 -->
         <div
           class="flex flex-col justify-evenly items-center py-10 md:flex-row"
         >
-          <!-- image -->
+          <!-- img -->
           <div class="text-center mb-10">
-            <img src="./img/app-1.png" alt="app scree" srcset="" />
+            <img src="./img/app-1.png" alt="app screen" />
           </div>
           <!-- text -->
           <div class="text-center md:text-left">
-            <span class="md:text-red-500 font-semibold">Create an account</span>
-            <!-- title  -->
-            <h2 class="text-4xl text-blue-900 font-bold max-w-md py-5">
+            <!-- tag -->
+            <span class="text-red-500 font-semibold">Create an account</span>
+            <!-- title -->
+            <h2
+              class="text-4xl text-blue-900 font-bold max-w-md leading-relaxed py-5"
+            >
               Create/login to an existing account to get started
             </h2>
-            <!-- des  -->
+            <!-- desc -->
             <p
               class="text-xl text-gray-500 font-light max-w-sm mx-auto md:mx-0"
             >
@@ -129,22 +137,25 @@
             </p>
           </div>
         </div>
-        <!-- Step 2 -->
+        <!-- step 2 -->
         <div
           class="flex flex-col justify-evenly items-center py-10 md:flex-row"
         >
-          <!-- image -->
+          <!-- img -->
           <div class="text-center mb-10 order-1 md:order-2">
-            <img src="./img/app-2.png" alt="app scree" srcset="" />
+            <img src="./img/app-2.png" alt="app screen" />
           </div>
           <!-- text -->
           <div class="text-center md:text-left order-2 md:order-1">
-            <span class="md:text-red-500 font-semibold">Create an account</span>
-            <!-- title  -->
-            <h2 class="text-4xl text-blue-900 font-bold max-w-md py-5">
+            <!-- tag -->
+            <span class="text-red-500 font-semibold">Create an account</span>
+            <!-- title -->
+            <h2
+              class="text-4xl text-blue-900 font-bold max-w-md leading-relaxed py-5"
+            >
               Create/login to an existing account to get started
             </h2>
-            <!-- des  -->
+            <!-- desc -->
             <p
               class="text-xl text-gray-500 font-light max-w-sm mx-auto md:mx-0"
             >
@@ -152,22 +163,25 @@
             </p>
           </div>
         </div>
-        <!-- Step 3 -->
+        <!-- step 3 -->
         <div
           class="flex flex-col justify-evenly items-center py-10 md:flex-row"
         >
-          <!-- image -->
+          <!-- img -->
           <div class="text-center mb-10">
-            <img src="./img/app-3.png" alt="app scree" srcset="" />
+            <img src="./img/app-3.png" alt="app screen" />
           </div>
           <!-- text -->
           <div class="text-center md:text-left">
-            <span class="md:text-red-500 font-semibold">Create an account</span>
-            <!-- title  -->
-            <h2 class="text-4xl text-blue-900 font-bold max-w-md py-5">
+            <!-- tag -->
+            <span class="text-red-500 font-semibold">Create an account</span>
+            <!-- title -->
+            <h2
+              class="text-4xl text-blue-900 font-bold max-w-md leading-relaxed py-5"
+            >
               Create/login to an existing account to get started
             </h2>
-            <!-- des  -->
+            <!-- desc -->
             <p
               class="text-xl text-gray-500 font-light max-w-sm mx-auto md:mx-0"
             >
@@ -177,43 +191,44 @@
         </div>
       </div>
     </section>
-    <!-- Download -->
+    <!-- === Download === -->
     <section>
-      <!-- background-image -->
+      <!-- background -->
       <div
         class="relative w-full h-custom bg-no-repeat bg-cover"
-        style="background-image: url(./img/download.png)"
+        style="background-image: url('./img/download.png')"
       >
         <div
-          class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-center z-10"
+          class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white z-10"
         >
-          <!-- title  -->
+          <!-- title -->
           <h1
             class="text-4xl mb-5 font-bold max-w-2xl md:leading-relaxed md:text-5xl"
           >
-            Download the app now.
+            Download the app now
           </h1>
           <!-- desc -->
           <p class="text-xl mb-5 font-light">
             Available on your favorite store. Start your premium experience now
           </p>
-          <!-- button  -->
+          <!-- buttons -->
           <div class="flex justify-center">
             <button
-              class="transition-all mx-4 border border-transparent bg-red-500 px-10 py-3 rounded-full hover:bg-transparent hover:border-white"
+              class="mx-4 border border-transparent bg-red-500 px-10 py-3 rounded-full hover:bg-transparent hover:border-white transition-all"
             >
               Playstore
             </button>
             <button
-              class="transition-all mx-4 border border-white bg-white px-10 py-3 rounded-full hover:border-transparent hover:bg-red-500"
+              class="mx-4 border border-white bg-transparent px-10 py-3 rounded-full hover:bg-red-500 hover:border-transparent transition-all"
             >
-              App store
+              Appstore
             </button>
           </div>
         </div>
       </div>
     </section>
-    <!-- foodter -->
+    <!-- === Footer === -->
+    <!-- Thẻ footer chỗ này sẽ hợp lý hơn -->
     <footer>
       <!-- container -->
       <div class="container mx-auto px-4">
@@ -271,6 +286,7 @@
         </div>
       </div>
     </footer>
+    <!-- main js -->
+    <script src="./main.js"></script>
   </body>
-  <script src="./main.js"></script>
 </html>
